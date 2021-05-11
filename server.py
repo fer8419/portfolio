@@ -21,7 +21,8 @@ def submit_form():
         print(data)
         write_to_csv(data)
         return redirect('/contact.html')
-    except:
+    except Exception as e:
+        print(e)
         return 'did not save to database'
 
 
