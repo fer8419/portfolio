@@ -26,14 +26,14 @@ def submit_form():
 
 
 def write_to_file(data):
-    with open('./db/database.txt', mode='a') as db:
+    with open('db/database.txt', mode='a') as db:
         # db.write(','.join(data.keys()))
         db.write('\n')
         db.write(','.join(data.values()))
 
 
 def write_to_csv(data):
-    with open('./db/database.csv', mode='a', newline='') as db:
+    with open('db/database.csv', mode='a', newline='') as db:
         email = data.get('email')
         subject = data.get('subject')
         message = data.get('message')
